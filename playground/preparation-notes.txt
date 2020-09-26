@@ -1,0 +1,272 @@
+HTML Web Storage Objects
+HTML web storage provides two objects for storing data on the client:
+
+window.localStorage - stores data with no expiration date
+window.sessionStorage - stores data for one session (data is lost when the browser tab is closed)
+
+- setItem
+- getItem
+- removeItem
+------------------------------------------------------------------------------------------------------------------------------------
+
+DOM
+
+The Document Object Model is a cross-platform and language-independent interface that treats an XML or HTML document
+as a tree structure wherein each node is an object representing a part of the document. 
+
+------------------------------------------------------------------------------------------------------------------------------------
+ElementRef
+
+ElementRef is a wrapper around a native element inside of a View.
+It's simply a class that wraps native DOM elements in the browser and allows you to work with the 
+DOM by providing the nativeElement object which exposes all the methods and properties of the native elements.
+------------------------------------------------------------------------------------------------------------------------------------
+Observables
+
+Observables provide support for passing messages between publishers and subscribers in your application.
+Observables offer significant benefits over other techniques for event handling, asynchronous programming, and handling multiple values.
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+@ViewChild
+
+The @ViewChild decorator allows us to inject into a component class references to elements used inside its template,
+that's what we should use it for.
+
+Using @ViewChild we can easily inject components, directives or plain DOM elements.
+------------------------------------------------------------------------------------------------------------------------------------
+
+HostListener
+
+Decorator that declares a DOM event to listen for, and provides a handler method to run when that event occurs.
+A set of arguments to pass to the handler method when the event occurs.
+------------------------------------------------------------------------------------------------------------------------------------
+The setTimeout(function, delay) function is used to start a timer that calls a particular function after the mentioned delay.
+The setInterval(function, delay) function is used to repeatedly execute the given function in the mentioned delay and only halts when cancelled.
+The clearInterval(id) function instructs the timer to stop.
+------------------------------------------------------------------------------------------------------------------------------------
+Datatype types –
+
+Primitive - number and Boolean data types.
+Reference - more complex types like strings and dates.
+------------------------------------------------------------------------------------------------------------------------------------
+The decodeURI() function decodes a Uniform Resource Identifier (URI) previously created by encodeURI() or by a similar routine. 
+------------------------------------------------------------------------------------------------------------------------------------
+Strict Mode adds certain compulsions to JavaScript.
+Under the strict mode, JavaScript shows errors for a piece of codes, which did not show an error before, 
+but might be problematic and potentially unsafe. 
+Strict mode also solves some mistakes that hamper the JavaScript engines to work efficiently.
+
+Strict mode can be enabled by adding the string literal "use strict" above the file. This can be illustrated by the given example:
+
+function myfunction() {
+    "use strict";
+    var v = "This is a strict mode function";
+}
+------------------------------------------------------------------------------------------------------------------------------------
+closures 
+
+Closure is a locally declared variable related to a function which stays in memory when the function has returned.
+
+function greet(message) {
+    console.log(message);
+}
+
+function greeter(name, age) {
+    return name + " says howdy!! He is " + age + " years old";
+}
+
+// Generate the message
+
+var message = greeter("James", 23);
+
+// Pass it explicitly to greet
+
+greet(message);
+
+This function can be better represented by using closures
+
+function greeter(name, age) {
+    var message = name + " says howdy!! He is " + age + " years old";
+    return function greet() {
+        console.log(message);
+    };
+}
+
+// Generate the closure
+
+var JamesGreeter = greeter("James", 23);
+
+// Use the closure
+
+JamesGreeter();
+------------------------------------------------------------------------------------------------------------------------------------
+The escape () function is responsible for coding a string so as to make the transfer of the information from one computer to the other,
+across a network.
+
+------------------------------------------------------------------------------------------------------------------------------------
+ViewEncapsulation
+
+Defines template and style encapsulation options available for Component's Component.
+------------------------------------------------------------------------------------------------------------------------------------
+ChangeDetectorRef
+
+Base class for Angular Views, provides change detection functionality.
+A change-detection tree collects all views that are to be checked for changes.
+------------------------------------------------------------------------------------------------------------------------------------
+dirty -> normal
+
+this.contextForm.markAsPristine();
+this.contextForm.markAsTouched();
+------------------------------------------------------------------------------------------------------------------------------------
+Custom Theme creation  - https://material.angular.io/guide/theming
+------------------------------------------------------------------------------------------------------------------------------------
+Custom Directive
+------------------------------------------------------------------------------------------------------------------------------------
+Charts
+------------------------------------------------------------------------------------------------------------------------------------
+@Input, @Output
+------------------------------------------------------------------------------------------------------------------------------------
+JavaScript:
+
+ Closure: https://www.w3schools.com/js/js_function_closures.asp
+
+Hoisting: https://scotch.io/tutorials/understanding-hoisting-in-javascript
+
+Strict mode: https://javascript.info/strict-mode
+
+Object properties & descriptors: https://javascript.info/property-descriptors
+
+"this" keyword: https://www.geeksforgeeks.org/this-in-javascript/
+
+Indexed & Keyed collections: http://webmobtuts.com/javascript/javascript-keyed-and-indexed-collections-array-map-and-set/
+
+Map, reduce & filter: https://danmartensen.svbtle.com/javascripts-map-reduce-and-filter
+
+Memory management: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Memory_Management
+
+Error handling: https://www.tutorialspoint.com/javascript/javascript_error_handling.htm
+
+Debugging: https://developers.google.com/web/tools/chrome-devtools/javascript/
+
+ 
+
+Object Oriented JavaScript:
+
+ 
+
+Basics: https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object-oriented_JS 
+
+Abstraction, Encapsulation, Inheritance & Polymorphism: https://javascriptissexy.com/oop-in-javascript-what-you-need-to-know/
+
+Inheritance & prototype  chain: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain 
+
+SOLID Principals: https://medium.com/@cramirez92/s-o-l-i-d-the-first-5-priciples-of-object-oriented-design-with-javascript-790f6ac9b9fa
+
+JavaScript Principals Design Patterns: https://scotch.io/bar-talk/4-javascript-design-patterns-you-should-know  
+
+ 
+
+==============
+
+ 
+
+TypeScript:
+
+ 
+
+Abstraction, Encapsulation, Inheritance & Polymorphism: https://rachelappel.com/2015/01/02/write-object-oriented-javascript-with-typescript/
+
+REST, default & optional params: https://howtodoinjava.com/typescript/functions-rest-optional-default-params/
+
+Overloading: https://www.bennadel.com/blog/3339-using-method-and-function-overloading-in-typescript.htm
+
+Iterators & decorators: https://www.typescriptlang.org/docs/handbook/iterators-and-generators.html
+
+Intersections & union types: https://www.typescriptlang.org/docs/handbook/advanced-types.html
+
+Decorators: https://www.typescriptlang.org/docs/handbook/decorators.html
+
+ 
+
+===============
+
+ 
+
+Angular:
+
+ 
+
+Bootstrapping: https://angular.io/guide/bootstrapping
+
+Lifecycle hooks: https://www.cuelogic.com/blog/angular-lifecycle
+
+Routing: https://blog.angularindepth.com/the-three-pillars-of-angular-routing-angular-router-series-introduction-fb34e4e8758e
+
+Router gaurd: https://codecraft.tv/courses/angular/routing/router-guards/
+
+Dependency injection (injectors, providers): https://angular.io/guide/dependency-injection
+
+Forms: https://angular-templates.io/tutorials/about/angular-forms-and-validations
+
+Directives: https://www.sitepoint.com/practical-guide-angular-directives/
+
+HostListener & HostBinding: https://codecraft.tv/courses/angular/custom-directives/hostlistener-and-hostbinding/
+
+Pipe: https://scotch.io/tutorials/create-a-globally-available-custom-pipe-in-angular-2
+
+Component communications: https://medium.com/@mirokoczka/3-ways-to-communicate-between-angular-components-a1e3f3304ecb
+
+ViewChildren, ViewChild, ContentChildren & ContentChild: https://medium.com/@tkssharma/understanding-viewchildren-viewchild-contentchildren-and-contentchild-b16c9e0358e 
+
+Services: https://angular.io/tutorial/toh-pt4
+
+HTTP Client: https://www.techiediaries.com/angular-http-client/
+
+Web workers: https://medium.com/@damoresac/using-web-workers-on-angular-6-6fd0490d07b5
+
+Base project structure & Webpack config: https://jasonwatmore.com/post/2019/04/24/angular-7-tutorial-part-2-create-base-project-structure-webpack-config
+
+AOT: https://angular.io/guide/aot-compiler
+
+Unit Tesitng: https://medium.com/@selvarajchinnasamyks/angular-7-unit-testing-97dccfdca900
+
+Mock backend: https://jasonwatmore.com/post/2019/05/02/angular-7-mock-backend-example-for-backendless-development
+
+ 
+
+===============    
+
+ 
+
+NgRx:
+
+ 
+
+State, actions & reducers: https://dzone.com/articles/managing-state-in-angular-with-ngrxstore
+
+https://blog.angularindepth.com/ngrx-tips-tricks-69feb20a42a7  
+
+ 
+
+===============  
+
+ 
+
+More links for in-depth reference:
+
+ 
+
+JavaScript:  https://www.w3schools.com/js/
+
+TypeScript:  https://www.typescriptlang.org/docs/handbook/basic-types.html
+
+Angular:  https://angular.io/guide/architecture
+
+Unit Testing:  https://angular.io/guide/testing
+
+RxJS:  https://rxjs-dev.firebaseapp.com/guide/overview
+
+NgRx:  https://ngrx.io/guide/store
+------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------
