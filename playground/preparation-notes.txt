@@ -101,6 +101,8 @@ var JamesGreeter = greeter("James", 23);
 
 JamesGreeter();
 ------------------------------------------------------------------------------------------------------------------------------------
+IIFE - https://www.tutorialsteacher.com/javascript/immediately-invoked-function-expression-iife
+------------------------------------------------------------------------------------------------------------------------------------
 The escape () function is responsible for coding a string so as to make the transfer of the information from one computer to the other,
 across a network.
 
